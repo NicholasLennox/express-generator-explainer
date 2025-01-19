@@ -1,7 +1,7 @@
 # Express-generator template
 
 This project exists to explain the template produced by the express-generator using EJS as our view engine.
-This template is a project that was last updated 6 years ago and does not include many modern JavaScript practices - meaning it may contain some funny looking code compared to what you are used to seeing. 
+This template is a project that was last updated 6 years ago and does not include some modern JavaScript practices. 
 
 It contains what, at the time, the express developers felt were necessary to create a production ready full-stack web application with the ability to scale. There are dependencies in this project that you do not need to use for the assignment, as we are not using many of the features, which can result in it feeling overwhelming and difficult to understand without help. This document aims to clarify what you need to actually pay attention to, while explaining - at a high level - what all these dependencies do.
 

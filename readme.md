@@ -7,7 +7,7 @@ It contains what, at the time, the express developers felt were necessary to cre
 
 Note: Express is an __unopinionated__ framework which means it comes with nothing out the box and everything you feel you need is added via dependencies. This is why you find many different dependencies in this template - it is vital to keep in mind that you dont **need** all these to use express.
 
-To keep this as simple as possible, no other dependencies will be installed - the starter code for the assignment contains largly the base template with a few small additions.  
+To keep this as simple as possible, no other dependencies will be installed - the starter code for the assignment contains largely the base template with a few small additions.  
 
 None of the code seen in this project you write yourself, it is all generated.
 
@@ -281,7 +281,7 @@ Now that we have seen how the logger is configured and works, let's move onto th
 
 ## Error handling
 
-There are two main areas where erorrs are caught in this template, in the server configuration (`www`) and in the application configuration (`app.js`).
+There are two main areas where errors are caught in this template, in the server configuration (`www`) and in the application configuration (`app.js`).
 
 Once again, this is due to the nature of this template being a scalable production ready template for the time and our concerns are separated.
 
@@ -427,7 +427,7 @@ Now that we have established the high level function of the error handling middl
 
 If we look at the `http-errors` [npm page](https://www.npmjs.com/package/http-errors) it doesn't really detail all the variations without us having to look at the actual code to see how its constructed. 
 
-In short, we can just proivide a status code to create an error from, and the package will create one of several different types of erorrs (Client, Server, and some others) based on the range of the status codes (400s for client errors - not including auth errors, 500s for server errors) - this mapping is **not important** to memorise, just understand there are different categories of errors that we create. 
+In short, we can just proivide a status code to create an error from, and the package will create one of several different types of errors (Client, Server, and some others) based on the range of the status codes (400s for client errors - not including auth errors, 500s for server errors) - this mapping is **not important** to memorise, just understand there are different categories of errors that we create. 
 
 Each error status code also has a message associated with it which this package adds to the error object (this can be overriden by passing your own message in the `createError` function as a second paramters - the template does not do this by default). 
 
@@ -560,7 +560,7 @@ var createError = require('http-errors') // Added
 router.get('/', function(req, res, next) {
   /* 
     Using the http-errors dependeny to create an error object, then throwing it.
-    This error then is caught by express' erorr handling to prevent the application from crashing.
+    This error then is caught by express' error handling to prevent the application from crashing.
     This invokes our custom error middleware and renders the error.ejs view as before.
   */
   throw createError(403) // Choosing a random error code to make sure its this error being shown
@@ -679,7 +679,7 @@ Now that we have seen how the default error handler works, we can revert our cha
 
 You can breath again, we are done with the error handling section now. Since this was such a long section with moving parts, the key points are sumarised below. 
 
-**Note**: You are **not expected** to implement anything error handling related for the assignment, or change any of the default configurations. All that is required of you is to simply understand that the erorrs you see are rendered because of the custom error handling middleware implemented in this template. 
+**Note**: You are **not expected** to implement anything error handling related for the assignment, or change any of the default configurations. All that is required of you is to simply understand that the errors you see are rendered because of the custom error handling middleware implemented in this template. 
 
 ### Error handling summary
 
